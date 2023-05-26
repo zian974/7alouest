@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+    <name>MOD_7AW_HOME</name>
+    <creationDate>2021-11-08</creationDate>
+    <author>Yann "Zian" CUIDET</author>
+    <authorEmail>zian.cuidet@protonmail.com</authorEmail>
+    <authorUrl>https://zian.re</authorUrl>
+    <copyright>[(C) 2021 Open Source Matters, Inc.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.1</version>
+    <description>MOD_7AW_HOME_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_7aw_home">mod_7aw_home.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>mod_7aw_home.xml</filename>
+    </files>
+</extension>

@@ -1,0 +1,102 @@
+/**
+ * @package     7aw
+ * @subpackage  Templates.7aw
+ *
+ * @copyright   (C) 2021 Open Source Matters, Inc. <https://www.7alouest.re/>
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+.parallax-wrapper {
+    perspective: 3px; 
+    width: 100%; 
+    height: calc(100vh - 72px); 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.parallax {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+// .parallax-article {
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     height: 320px;
+//     width: 100%;
+//     background-image:url(../images/photos/accueuil-brook-anderson-unsplash-cordes-1920.webp);
+// }
+
+
+.parallax-top {
+    height: calc(100vh - 72px); 
+    transform: translateZ(-1px) scale(1.75);
+    z-index: -1;
+}
+
+.parallax-top-text {
+
+    display: flex;
+    flex-direction: column;
+    // height: calc(100vh);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    // transform: translateZ(-5px) scale(2);
+    position: relative;
+    top: -90%;
+    z-index: 9;
+    .logo {
+        height: unset;
+        width: 38%;
+        margin-bottom: 3rem
+    }
+
+}
+
+
+@media (max-width: 767.98px) {  
+    .parallax-top-text {
+        // transform: translateZ(-5px) scale(3);
+        .logo {
+            width: 60%;
+        }
+    }
+}
+
+.parallax-top-text .logo-path {
+  fill:#FFF; 
+  filter: url(#logo-shadow); 
+}
+
+.parallax-top-text .display-1 {
+    font-family: Solway;
+    color: white;
+    font-weight: 700 ;
+    text-shadow: 0 3px 3px rgba(0,0,0,.5);
+}
+.parallax-top-text .display-6 {
+    /* font-family: Caveat; */
+    font-weight: 700 ;
+    color: white;
+    text-shadow: 0 3px 3px rgba(0,0,0,.5);
+}
+
+
+.parallax-top.parallax-home {
+    background-image:url(../images/photos/accueuil-brook-anderson-unsplash-cordes-1920.webp);
+    height: calc(100vh);
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.no-parallax {
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}

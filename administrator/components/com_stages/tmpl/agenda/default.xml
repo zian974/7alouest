@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_STAGES_STAGIAIRES_AGENDA_TITLE" option="View">
+        
+        <fields name="request">
+                <fieldset name="request">
+                        <field name="view" type="hidden" default="agenda"/>
+                        <field
+                                name="id"
+                                query="(SELECT '' as `id`, '' as `label`) UNION (SELECT `id`, `label` FROM #__stages_stages ORDER BY `id`)"
+                                type="sql"
+                                key_field="id" 
+                                value_field="label"
+                                label="COM_STAGES_STAGIAIRES_AGENDA_ID"
+                                require="true"
+                                description=""/>
+                </fieldset>
+        </fields>
+        <message>
+                        <![CDATA[COM_STAGES_STAGIAIRES_AGENDA_MESSAGE]]>
+        </message>
+	</layout>
+	
+</metadata>

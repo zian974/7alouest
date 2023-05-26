@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 15, 2021, 7:44:59 AM
+    Author     : zian
+*/
+
+.map-wrapper {
+    background-color: black;
+    height: 360px;
+    width: 100%;
+    position: relative;
+}
+
+#ol-map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.map-buttons-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0.25rem;
+    background-color: rgba(255,255,255,.56);
+    border-radius: 4px;
+}
+
+.map-buttons-wrapper .separator {
+    height: 0.5rem;
+}
+
+.map-buttons-wrapper .mat-button {
+    background: rgb(234,47,105);
+    width: 36px;
+    height: 36px;
+    min-width: unset;
+    padding: 0;
+}
+.map-buttons-wrapper .map-button:not(:last-child) {
+    margin-bottom: 0.25rem;
+}
+
+.map-buttons-wrapper .mat-button-focus-overlay {
+    background-color: #000;
+}
+.map-buttons-wrapper .mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay, 
+.map-buttons-wrapper .mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+    opacity: .125;
+}

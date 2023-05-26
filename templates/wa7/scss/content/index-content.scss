@@ -1,0 +1,18 @@
+@use 'content-mixins';
+@use 'module';
+
+@use 'article-info';
+@use 'blog';
+@use 'article';
+
+
+.page-header {
+
+    h1 {
+        @include content-mixins.page-header-1
+    }
+
+    h2 {
+        @include content-mixins.page-header-2;
+    }
+}

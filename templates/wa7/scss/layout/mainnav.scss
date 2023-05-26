@@ -1,0 +1,262 @@
+/**
+ * @package     7aw
+ * @subpackage  Templates.7aw
+ *
+ * @copyright   (C) 2021 Open Source Matters, Inc. <https://www.7alouest.re/>
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/** 
+ * LOGO 
+ */
+ 
+.logo {
+    height: 40px;
+}
+
+.logo-path {
+    fill: var(--main-color)
+}
+
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
+}
+
+
+.mainnav-wrapper {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.58);
+}
+
+
+.mainnav {
+    width: 100%;
+}
+
+
+.mainnav .nav-link a, 
+.mainnav .nav-link .nav-header {
+    font-family: "Roboto Condensed";
+    font-size: 1rem;
+    align-items: center;
+    font-weight: 700;
+    display: block;
+}
+
+.mainnav .nav-link:hover .nav-header,
+.mainnav .nav-link a:hover {
+    color: white
+}
+.mainnav .level1 > li {
+    padding: 0;
+}
+.mainnav .level1 > li > a, 
+.mainnav .level1 > li > .nav-header {
+    padding: 1.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+.mainnav .level1 > li > .nav-header::after {
+    content: "expand_more";
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+
+    vertical-align: bottom;
+    transition: transform 300ms ease-out;
+}
+
+.mainnav .level1 > li.show > .nav-header::after {
+    transform: rotate(-180deg)
+}
+
+.mainnav .level1 > li.show .level2-wrapper {
+    display: block;
+}
+
+.mainnav .level2-wrapper {
+    background-color: var(--main-color);
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.58);
+}
+
+.mainnav .level2 {
+    display: flex;
+}
+
+.mainnav .level2 > li:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+.mainnav .level2 .deeper .nav-header {
+    font-weight: 700;
+    padding: 0;
+}
+
+
+.mainnav .deeper ul {
+    margin-bottom: 0;
+}
+
+.mainnav .deeper li .nav-header,
+.mainnav .deeper li a {
+    color: white;
+}
+
+.mainnav .deeper .nav-link a {
+    font-weight: 400;
+    
+}
+
+
+.mainnav .nav .nav-fake {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 0 1rem;
+    z-index: -1;
+    transition: left .3s ease, width .4s ease-in-out;
+}
+
+.mainnav .nav .nav-fake-inner.show {
+    position: absolute;
+    background-color: var(--color-fluoro-pink);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* 
+    OFFCANVAS 
+*/
+.mainnav .offcanvas {
+    width: unset;
+}
+
+.mainnav .offcanvas.show {
+    background-color: var(--main-color);
+}
+
+.mainnav .offcanvas-header {
+    flex-direction: column;
+}
+.mainnav .offcanvas-header .offcanvas-topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.mainnav .offcanvas-header .logo .logo-path {
+    fill: white;
+}
+
+.mainnav .offcanvas-body {
+    padding-left: 2.5rem;
+    justify-content: flex-start;
+}
+
+.offcanvas-topbar .btn-close {
+    background-color: white;
+}
+
+.mainnav .offcanvas.show .nav {
+    flex-direction: column;
+}
+
+
+.mainnav .offcanvas.show, 
+.mainnav .offcanvas.show .nav .nav-link a, 
+.mainnav .offcanvas.show .nav .nav-header {
+    color: #FFF;
+}
+.mainnav .offcanvas.show .nav .nav-link a:hover {
+    color: var(--color-fluoro-pink);
+}
+
+.mainnav .offcanvas.show li.show > .nav-header + ul {
+    display: block;
+}
+
+.mainnav .offcanvas.show .level1 > li a, 
+.mainnav .offcanvas.show .level1 > li .nav-header {
+    padding: 0.5rem 0;
+}
+
+.mainnav .offcanvas.show .level2-wrapper {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    box-shadow: unset;
+    padding: 0;
+}
+
+.mainnav .offcanvas.show .level2 {
+    flex-direction: column;
+}
+
+.mainnav .offcanvas.show .level2 > li a, 
+.mainnav .offcanvas.show .level2 > li .nav-header {
+    padding: 0;
+}
+
+.mainnav .offcanvas.show .nav .nav-fake {
+    display: none;
+}
+
+.mainnav .offcanvas.show .nav-fake .nav-fake-inner {
+    height: 41px;
+}
+
+
+@media (max-width: 767.98px) {   
+    .mainnav .offcanvas {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .mainnav {
+        justify-content: space-between;
+    }
+}
+

@@ -1,0 +1,86 @@
+.jcc-color-box {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.other-filters {
+    padding: 0 14px;
+}
+
+.zn-tiles .zntile {
+    --text-color: hsl(var(--hue), 30%, 40%);
+    --bg-color: hsl(var(--hue), 60%, 97%);
+    --icon-color: hsl(var(--hue), 30%, 40%);
+    --bg-color-hvr: var(--template-bg-dark);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-grow: 1;
+}
+
+.zn-tiles .zntile:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.zn-tiles .zntile-single, .zn-tiles .zntile-group {
+    display: flex;
+    min-height: 6rem;
+    overflow: hidden;
+    border: 1px solid hsl(var(--hue), 50%, 93%);
+    border-radius: 4px;
+}
+
+.zn-tiles .zntile > div.success {
+    --text-color: var(--success);
+    --bg-color: #f3f9f3;
+    --icon-color: #55a258;
+    --bg-color-hvr: var(--success);
+}
+
+.zn-tiles .zntile > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.25s ease;
+}
+
+.zn-tiles .zntile-info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.zn-tiles .zntile > div .zntile-icon {
+    margin-top: 0.5rem;
+    -webkit-margin-start: 0.2rem;
+    margin-inline-start: 0.2rem;
+}
+
+.zn-tiles .zntile > div .zntile-icon {
+    font-size: 2rem;
+    color: var(--icon-color);
+}
+
+.zn-tiles .zntile > div .zntile-name {
+    padding: 0.125rem 0 0.6rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.zn-tiles .zntile > div .j-links-link {
+    display: block;
+    padding: 0 0.2rem;
+    line-height: 1.1;
+}
+
+
+.tbody-icon.success .fa-pen {
+    border-color: var(--warning);
+    color: var(--warning);
+}

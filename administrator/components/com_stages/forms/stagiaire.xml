@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Zianstages\Component\Stages\Administrator\Field">
+       <fieldset addruleprefix="Zianstages\Component\Stages\Administrator\Rule">
+       
+       <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+              <option value="1">JPUBLISHED</option>
+              <option value="0">JUNPUBLISHED</option>
+              <option value="2">JARCHIVED</option>
+              <option value="-2">JTRASHED</option>
+       </field>
+       
+       <field name="ordering"/>
+       <field name="checked_out" type="hidden" filter="unset"/>
+       <field name="checked_out_time" type="hidden" filter="unset"/>
+       <field name="created_by" type="createdby" default="0" 
+              label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_DESC" 
+              hidden="true" hint="COM_STAGES_FORM_LBL_CREATED_BY"/>
+       <field name="modified_by" type="modifiedby" default="0" 
+              label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" description="JGLOBAL_FIELD_MODIFIED_BY_DESC" 
+              hidden="true" hint="COM_STAGES_FORM_LBL_MODIFIED_BY"/>
+    
+       <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+
+       <field name="stage_id" type="hidden" required="true"/>
+       
+       <field name="slot_id" type="hidden"/>
+
+       <field name="date" type="stagedays" required="true" label="COM_STAGES_STAGIAIRE_FORM_LBL_DATE" />     
+       
+       <field name="horaire" type="list" required="true" message="Ce champ est requis" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_HORAIRE" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_HORAIRE" hint="COM_STAGES_FORM_LBL_HORAIRE">
+            <option value="0">COM_STAGES_HORAIRE_OPTION_0</option>
+            <option value="1">COM_STAGES_HORAIRE_OPTION_1</option>
+            <option value="2">COM_STAGES_HORAIRE_OPTION_2</option>
+            <option value="3">COM_STAGES_HORAIRE_OPTION_3</option>
+            <option value="4">COM_STAGES_HORAIRE_OPTION_4</option>
+       </field>
+
+       <field name="nom" size="100" maxlength="100" filter="safehtml" validate="Stagiaireunique"
+              type="text" required="true" message="Ce champ est requis" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_NOM" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_NOM" 
+              hint="COM_STAGES_STAGIAIRE_FORM_HINT_NOM"/>
+       
+       <field name="prenom" size="50" maxlength="50" filter="safehtml" 
+              type="text" required="true" message="Ce champ est requis" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_PRENOM" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_PRENOM" 
+              hint="COM_STAGES_STAGIAIRE_FORM_HINT_PRENOM"/>
+       
+       <field name="licence" type="radio" buttons="true" layout="joomla.form.field.radio.switcher" default="0" 
+              required="true" message="Ce champ est requis" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_LICENCE" 
+              validate="Stagiairenolicence"
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_LICENCE" 
+              hint=""
+              onchange="Joomla.StagiaireEdit.onRange()" >
+              <option value="0">COM_STAGES_NO</option>
+              <option value="1">COM_STAGES_YES</option>
+       </field>
+       
+       <field name="licence_num" type="text" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_LICENCE_NUM" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_LICENCE_NUM" 
+              hint="COM_STAGES_STAGIAIRE_FORM_HINT_LICENCE_NUM"/>
+
+       <field name="email" validate="email" type="email" required="true" 
+              message="Ce champ est requis" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_EMAIL" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_EMAIL" 
+              hint="COM_STAGES_STAGIAIRE_FORM_HINT_EMAIL"/>
+       
+       <field name="telephone" filter="safehtml" type="tel" required="true" 
+              message="Ce champ est requis" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_TELEPHONE" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_TELEPHONE" 
+              hint="Numéro de téléphone"/>
+
+       <field name="ddn" class="inputbox" format="d-m-Y" required="true" validate="Stagiaireddn" 
+              minyear="-40" type="date" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_DDN" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_DDN" 
+              hint="COM_STAGES_STAGIAIRE_FORM_LBL_DDN" 
+              showon="licence:0"/>
+
+       <!-- <field name="pointure" type="range" default="0" label="Sélectionner la pointure" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_POINTURE" min="25" max="50" step="1" 
+              onchange="Joomla.StagiaireEdit.onRange()"/> -->
+
+       <field name="pointure" type="text" pattern="0|[2-5][0-9]" label="Sélectionner la pointure" required="true" default="0"
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_POINTURE" 
+              showon="licence:0" />
+
+       <!-- <field name="shoesize" first="0" last="50" type="integer" step="1" default="" required="true" disabled="disabled"
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_POINTURE" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_POINTURE" 
+              hint="COM_STAGES_STAGIAIRE_FORM_LBL_POINTURE" showon="licence:0"/> -->
+       
+       <field name="reglement" type="radio" buttons="true" layout="joomla.form.field.radio.switcher" default="0" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_REGLEMENT" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_REGLEMENT">
+              <option value="0">COM_STAGES_NO</option>
+              <option value="1">COM_STAGES_YES</option>
+       </field>
+       
+       <field name="presence" type="radio" buttons="true" layout="joomla.form.field.radio.switcher" default="0" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_ABSENCE" 
+              description="COM_STAGES_STAGIAIRE_FORM_DESC_ABSENCE" 
+              hint="">
+              <option value="0">COM_STAGES_NO</option>
+              <option value="1">COM_STAGES_YES</option>
+       </field>
+
+       <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+
+
+
+       <!-- <field name="date" default="" type="date" class="inputbox" filter="safehtml"
+              required="true" message="Ce champ est requis"
+              format="%Y-%m-%d" minyear="2022" 
+              translateformat="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" 
+              label="COM_STAGES_STAGIAIRE_FORM_LBL_DATE" description="COM_STAGES_STAGIAIRE_FORM_DESC_DATE" hint="COM_STAGES_STAGIAIRE_FORM_HINT_DATE"/> -->
+    
+  </fieldset>
+</form>

@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Oct 12, 2021, 6:34:06 PM
+    Author     : zian
+*/
+
+:root {
+    --color-fluoro-orange : rgb(242, 127, 48);
+    --color-light-blue : #3A75CA;
+    --color-light-blue-2 : #427cbf;
+    --color-sky-blue : #0e64a1;
+    --color-red : #B2322B;
+    --color-red-2 : rgba(178, 50, 43, 0.5);
+    --color-green : #5C9901;
+    --color-green-2 : rgba(149, 201, 61, 0.5);
+    --color-spring-green : #56b138;
+    --color-fluoro-green : #68ba4c;
+
+    --color-orange : #FF8000;
+    --color-fluoro-orange : #f27f30;
+    --color-us-orange : #ed5a3a;
+
+    --color-purple : #6333A1;
+    --color-purple-2 : #9d57a3;
+    --color-fluoro-pink : #ea2f69;
+
+    --color-yellow : #FBF423;
+    --color-yellow-2 : #f6d925;
+    --color-fluoro-yellow : #eee83d;
+    --color-safran: #f3d617;
+    --color-brown : #5a2d16;
+
+    --color-graphite-grey : #45484E;
+    --color-grey : #959090;
+    --color-light-grey : #CCC;
+    --color-silver-grey : #dedede;
+
+    --main-color: var(--color-sky-blue);
+}

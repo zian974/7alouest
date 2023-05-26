@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_stages",
+  "version": "CVS: 0.0.1",
+  "license": "GNU General Public License version 2 ou version ultérieure ; Voir LICENSE.txt",
+  "assets": [
+    {
+      "name": "com_stages.admin",
+      "type": "style",
+      "uri": "com_stages/admin.css"
+    },
+    {
+      "name": "com_stages.admin",
+      "type": "script",
+      "uri": "com_stages/admin.js",
+      "dependencies": [
+        "jquery"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+        "name": "com_stages.list",
+        "type": "style",
+        "uri": "com_stages/list.css"
+    },
+    {
+      "name": "com_stages.scheduler",
+      "type": "script",
+      "uri": "com_stages/scheduler.js"
+    },
+
+    {
+      "name": "com_stages.scheduler",
+      "type": "style",
+      "uri": "com_stages/scheduler.css"
+    }
+
+  ]
+}

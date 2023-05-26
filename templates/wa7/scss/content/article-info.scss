@@ -1,0 +1,38 @@
+.article-info {
+
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    .article-info-term {
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    dd {
+        display: inline-block;
+
+        &:not(:last-child) { 
+            margin-right: 0.75rem;
+        }
+        &.category-name, &.parent-category-name {
+            background: var(--color-fluoro-pink);
+            padding: 10px 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;  
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: var(--color-graphite-grey);
+                }
+            }
+        }
+    }
+
+    &:first-of-type {
+        margin-bottom: 0;
+    }
+    
+}

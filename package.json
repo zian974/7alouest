@@ -1,0 +1,18 @@
+{
+  "name": "wa7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildw": "sass --watch templates/wa7/scss/index.scss templates/wa7/css/index.css & tsc -w "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "sass": "^1.46.0",
+    "typescript": "^4.5.4"
+  }
+}

@@ -1,0 +1,63 @@
+CREATE TABLE IF NOT EXISTS `#__stages_stages` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `state` tinyint(1) DEFAULT '1',
+  `ordering` int DEFAULT '0',
+  `checked_out` int unsigned DEFAULT NULL,
+  `checked_out_time` datetime DEFAULT NULL,
+  `created_by` int DEFAULT '0',
+  `modified_by` int DEFAULT '0',
+  `label` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_start` date NOT NULL DEFAULT '0000-00-00',
+  `date_end` date NOT NULL DEFAULT '0000-00-00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE `#__stages_slots` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `stage_id` int unsigned DEFAULT '0',
+  `asset_id` int unsigned NOT NULL DEFAULT '0',
+  `state` tinyint(1) DEFAULT '1',
+  `ordering` int DEFAULT '0',
+  `checked_out` int unsigned DEFAULT NULL,
+  `checked_out_time` datetime DEFAULT NULL,
+  `created_by` int DEFAULT '0',
+  `modified_by` int DEFAULT '0',
+  `slot_date` date NOT NULL,
+  `slot_periode` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slot_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slot_place` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slot_public` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slot_message` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`),
+  KEY `fk_wa7_slots_stageid_idx` (`stage_id`),
+  CONSTRAINT `fk_wa7_slots_stageid` FOREIGN KEY (`stage_id`) REFERENCES `wa7_stages_stages` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE `#__stages_stagiaires` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `stage_id` int unsigned NOT NULL,
+  `slot_id` int unsigned NOT NULL,
+  `state` tinyint(1) DEFAULT '1',
+  `ordering` int DEFAULT '0',
+  `checked_out` int unsigned DEFAULT NULL,
+  `checked_out_time` datetime DEFAULT NULL,
+  `created_by` int DEFAULT '0',
+  `modified_by` int DEFAULT '0',
+  `date` date NOT NULL,
+  `horaire` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nom` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prenom` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `licence` tinyint(1) NOT NULL,
+  `licence_num` VARCHAR(45) NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telephone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ddn` date DEFAULT NULL,
+  `pointure` int DEFAULT NULL,
+  `reglement` tinyint(1) DEFAULT '0',
+  `presence` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `fk_stages_stagiaires_stages_idx` (`stage_id`),
+  KEY `fk_wa7_stagiaires_slotid_idx` (`slot_id`),
+  CONSTRAINT `fk_wa7_stagiaires_slotid` FOREIGN KEY (`slot_id`) REFERENCES `wa7_stages_slots` (`id`),
+  CONSTRAINT `fk_wa7_stagiaires_stageid` FOREIGN KEY (`stage_id`) REFERENCES `wa7_stages_stages` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        
+        <field name="search" type="text" description="COM_STAGES_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="state"
+               type="status"
+               label="COM_STAGES_FILTER_STATE"
+               description="COM_STAGES_FILTER_STATE_DESC"
+               onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field name="slot_type" label="COM_STAGES_FORM_LBL_SLOT_TYPE" type="list" onchange="this.form.submit();" 
+               default="COM_STAGES_SLOTS_SLOT_TYPE_FILTER">
+          <option value="">COM_STAGES_SLOTS_SLOT_TYPE_FILTER</option>
+          <option value="voies">COM_STAGES_SLOTS_SLOT_TYPE_OPTION_VOIES</option>
+          <option value="bloc">COM_STAGES_SLOTS_SLOT_TYPE_OPTION_BLOC</option>
+          <option value="voiesbloc">COM_STAGES_SLOTS_SLOT_TYPE_OPTION_VOIESBLOC</option>
+        </field>
+        
+        <field name="slot_place" label="COM_STAGES_FORM_LBL_SLOT_PLACE" type="list" onchange="this.form.submit();" 
+               default="COM_STAGES_SLOTS_SLOT_PLACE_FILTER">
+          <option value="">COM_STAGES_SLOTS_SLOT_PLACE_FILTER</option>
+          <option value="saint-leu">COM_STAGES_SLOTS_SLOT_PLACE_OPTION_SAINT-LEU</option>
+          <option value="les-avirons">COM_STAGES_SLOTS_SLOT_PLACE_OPTION_LES-AVIRONS</option>
+          <option value="3bassins-barrage">COM_STAGES_SLOTS_SLOT_PLACE_OPTION_3BASSINS-BARRAGE</option>
+        </field>
+        
+        <field name="slot_public" label="COM_STAGES_FORM_LBL_SLOT_PUBLIC" type="list" onchange="this.form.submit();" 
+               default="COM_STAGES_SLOTS_SLOT_PUBLIC_FILTER">
+          <option value="">COM_STAGES_SLOTS_SLOT_PUBLIC_FILTER</option>
+          <!--<option value="licence35">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_LICENCE35</option>-->
+          <option value="licence69">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_LICENCE69</option>
+          <option value="licence611">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_LICENCE611</option>
+          <option value="licence711">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_LICENCE711</option>
+          <option value="licence1014">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_LICENCE1014</option>
+          <option value="licence1217">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_LICENCE1217</option>
+          <!--<option value="nonlicence35">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_NONLICENCE35</option>-->
+          <option value="nonlicence69">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_NONLICENCE69</option>
+          <option value="nonlicence711">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_NONLICENCE711</option>
+          <option value="nonlicence1014">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_NONLICENCE1014</option>
+          <option value="nonlicence1217">COM_STAGES_SLOTS_SLOT_PUBLIC_OPTION_NONLICENCE1217</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+
+        <field name="fullordering"
+               type="list"
+               label="COM_STAGES_LIST_FULL_ORDERING"
+               description="COM_STAGES_LIST_FULL_ORDERING_DESC"
+               onchange="this.form.submit();"
+               default="a.id DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.id ASC">COM_STAGES_SLOTS_ID_ASC</option>
+            <option value="a.id DESC">COM_STAGES_SLOTS_ID_DESC</option>
+            <option value="a.state ASC">COM_STAGES_SLOTS_STATE_ASC</option>
+            <option value="a.state DESC">COM_STAGES_SLOTS_STATE_DESC</option>
+            <option value="a.ordering ASC">COM_STAGES_SLOTS_ORDERING_ASC</option>
+            <option value="a.ordering DESC">COM_STAGES_SLOTS_ORDERING_DESC</option>
+            <option value="a.slot_date ASC">COM_STAGES_SLOTS_SLOT_DATE_ASC</option>
+            <option value="a.slot_date DESC">COM_STAGES_SLOTS_SLOT_DATE_DESC</option>
+<!--            <option value="a.slot_periode ASC">COM_STAGES_SLOTS_SLOT_PERIODE_ASC</option>
+            <option value="a.slot_periode DESC">COM_STAGES_SLOTS_SLOT_PERIODE_DESC</option>-->
+            <option value="a.slot_type ASC">COM_STAGES_SLOTS_SLOT_TYPE_ASC</option>
+            <option value="a.slot_type DESC">COM_STAGES_SLOTS_SLOT_TYPE_DESC</option>
+            <option value="a.slot_place ASC">COM_STAGES_SLOTS_SLOT_PLACE_ASC</option>
+            <option value="a.slot_place DESC">COM_STAGES_SLOTS_SLOT_PLACE_DESC</option>
+            <option value="a.slot_public ASC">COM_STAGES_SLOTS_SLOT_PUBLIC_ASC</option>
+            <option value="a.slot_public DESC">COM_STAGES_SLOTS_SLOT_PUBLIC_DESC</option>
+        </field>
+
+       <field name="limit"
+               type="limitbox"
+               label="COM_STAGES_SLOTS_LIST_LIMIT"
+               description="COM_STAGES_SLOTS_LIST_LIMIT_DESC"
+               class="input-mini"
+               default="25"
+               onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

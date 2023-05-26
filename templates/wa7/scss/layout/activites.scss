@@ -1,0 +1,158 @@
+/**
+ * @package     7aw
+ * @subpackage  template.7aw
+ * 
+ * @author     Yann "Zian" CUIDET <zian.cuidet@protonMail.com>
+ * @link       https://zian.re
+ *
+ * @copyright   (C) 2021 Open Source Matters, Inc. <https://www.7alouest.re/>
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+.activites {
+    width: 100%;
+    padding: 0 1rem 1rem;
+}
+
+.activite {
+    height: 400px;
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.58);
+}
+
+.activite.rose {
+    background-image: url(../../../images/les-activites/mur-escalade-club-7aw-saint-leu-reunion.webp);
+    background-size: cover;
+}
+.activite.violet  {
+    background-image: url(../../../images/les-activites/5-bloc-aviron-sortie-escalade-club-7aw-saint-leu-reunion.webp);
+    background-size: cover;
+}
+.activite.bleu  {
+    background-image: url(../../../images/les-activites/A668A0C5-7D3B-4F0F-A523-8CD03A4E9327.webp);
+    background-size: cover;
+}
+.activite.vert  {
+    background-image: url(../../../images/les-activites/6-aloes-sortie-falaise-escalade-club-7aw-saint-leu-reunion.webp);
+    background-size: cover;
+}
+
+
+.activite li {
+    margin-bottom: 1rem;
+    list-style-type: none;
+}
+
+.activite-mask {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(62% 0%, 100% 0, 100% 100%, 38% 100%, 62% 0);
+    border-radius: 5px;
+   
+}
+.activite-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.activite-shape {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 62% 0, 38% 100%, 0% 100%);
+    shape-outside: polygon(0% 0%, 62% 0, 38% 100%, 0% 100%);
+    shape-margin: 2rem;
+    float: left;
+    border-radius: 5px;
+}
+
+
+.rose .activite-mask {
+    background-color: var(--color-fluoro-pink);
+}
+
+.violet .activite-mask {
+    background-color: var(--color-purple-2);
+}
+
+.bleu .activite-mask {
+    background-color: var(--color-sky-blue);
+}
+
+.vert .activite-mask {
+    background-color: var(--color-fluoro-green);
+}
+
+.activite-text {
+    height: 100%;
+}
+
+.rose .activite-text, 
+.violet .activite-text,
+.bleu .activite-text,
+.vert .activite-text {
+    color: white;
+}
+
+.activite-text .button {
+    color: white;
+    border-color: white;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.activite-text .display-4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 500;
+}
+
+
+
+@media (max-width: 992px) { 
+    .activite {
+        display: flex;
+    }
+    .activite-mask,
+    .activite-shape {
+        display: none;
+    }
+    .activite-wrapper {
+        margin: auto;
+        position: initial;
+        height: unset;
+        width: unset;
+    }
+    .rose .activite-wrapper {
+        background-color: var(--color-fluoro-pink);
+        box-shadow: 1px 1px 10px rgb(234 47 105 / 58%);
+    }  
+    .violet .activite-wrapper {
+        background-color: var(--color-purple-2);
+        box-shadow: 1px 1px 10px var(--color-purple-2);
+    }   
+    .bleu .activite-wrapper {
+        background-color: var(--color-sky-blue);
+        box-shadow: 1px 1px 10px var(--color-sky-blue);
+    }   
+    .vert .activite-wrapper {
+        background-color: var(--color-fluoro-green);
+        box-shadow: 1px 1px 10px var(--color-fluoro-green);
+    }
+    .activite-text ul {
+        display: none;
+    }
+    .activite-text button {
+        position: initial;
+        top: unset;
+        bottom: unset;
+        width: 100%;
+    }
+}

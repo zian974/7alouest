@@ -1,0 +1,24 @@
+@use 'content-mixins';
+
+.com-content-article {
+
+    .page-header {
+        h1 {
+            @include content-mixins.page-header-1
+        }
+
+        h2, h1[itemprop=headline] {
+            @include content-mixins.page-header-2
+        }
+    }
+
+    .com-content-article__body {
+
+
+        ul li h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+    }
+}

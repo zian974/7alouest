@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Zianstages\Component\Stages\Administrator\Field">
+  <fieldset>
+      
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+ 
+    <field name="licence_num" type="text" filter="safehtml"
+           label="COM_STAGES_STAGIAIRE_FORM_LBL_LICENCE_NUM" 
+           description="COM_STAGES_STAGIAIRE_FORM_DESC_LICENCE_NUM" 
+           hint="COM_STAGES_STAGIAIRE_FORM_HINT_LICENCE_NUM"/>
+    </fieldset>
+
+</form>
+
+

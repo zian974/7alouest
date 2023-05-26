@@ -1,0 +1,56 @@
+
+@use 'fonts';
+
+body {
+  font: fonts.$font-stack;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: fonts.$font-heading;
+}
+
+ul, ol {
+    list-style-type: square;
+}
+
+ul ul, ol ol {
+    list-style-type: circle;
+    margin-bottom: 1rem;
+}
+
+
+a, .mod-menu__heading {
+    transition: .3s all ease;
+    color: var(--main-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: var(--color-fluoro-pink);
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.form-control-feedback {
+    margin-left: 1rem;
+    color: red;
+}
+
+.form-front .control-group {
+    margin-bottom: 1rem;
+}
+
+.form-front .control-group.hidden {
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.fxFill {
+    flex: 1
+}

@@ -1,0 +1,149 @@
+
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "wa7",
+  "version": "4.0.0",
+  "description": "This file contains details of the assets used by 7aw, the default Joomla 4 site template.",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "template.wa7.color",
+      "type": "style",
+      "uri": "color.css"
+    },
+
+    {
+      "name": "template.wa7.layout",
+      "type": "style",
+      "uri": "layout.css"
+    },
+
+    {
+      "name": "template.wa7",
+      "type": "style",
+      "uri": "template.css",
+      "dependencies": [
+        "template.wa7.layout"
+      ]
+    },
+
+    {
+      "name": "template.wa7.module",
+      "type": "style",
+      "uri": "module.css",
+      "dependencies": [
+        "template.wa7"
+      ]
+    },
+
+    {
+      "name": "template.wa7.content",
+      "type": "style",
+      "uri": "content.css"
+    },
+
+    {
+      "name": "template.wa7.icons",
+      "type": "style",
+      "uri": "icons.css"
+    },
+
+    {
+      "name": "template.wa7.parallax",
+      "type": "style",
+      "uri": "parallax.css"
+    },
+
+    {
+      "name": "template.wa7.footer",
+      "type": "style",
+      "uri": "footer.css"
+    },
+    
+    {
+      "name": "template.wa7.button",
+      "type": "style",
+      "uri": "button.css"
+    },
+    
+    {
+        "name": "template.wa7.map",
+        "type": "script",
+        "uri": "map.js",
+        "dependencies": [
+          "template.wa7.ol"
+        ],
+          "attributes": {
+          "type": "module"
+        }
+    },
+    
+    {
+      "name": "template.wa7.mapcss",
+      "type": "style",
+      "uri": "map.css"
+    },
+    
+    
+    {
+      "name": "template.wa7.ol",
+      "type": "script",
+      "uri": "ol/ol.js",
+        "attributes": {
+        "type": "module"
+      }
+    },
+    
+    {
+      "name": "template.wa7.olcss",
+      "type": "style",
+      "uri": "ol.css"
+    },
+    
+    {
+      "name": "template.wa7.mainnavcss",
+      "type": "style",
+      "uri": "layout-mainnav.css",
+      "dependencies": [
+        "template.wa7.color"
+      ]
+    },
+    
+    {
+        "name": "template.wa7.mainnav",
+        "type": "script",
+        "uri": "mainnav.js",
+        "attributes": {
+          "type": "module"
+        }
+    },
+    
+    
+    
+    {
+      "name": "template.wa7.activites",
+      "type": "style",
+      "uri": "activites.css"
+      
+    },
+    
+    {
+      "name": "template.wa7.indexcss",
+      "type": "style",
+      "uri": "index.css",
+      "dependencies": [
+        "template.wa7.color"
+      ]
+    },
+
+    {
+      "name": "template.wa7.index",
+      "type": "script",
+      "uri": "index.js",
+        "attributes": {
+        "type": "module"
+      }
+    }
+  ]
+}
+

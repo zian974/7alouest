@@ -1,0 +1,211 @@
+
+/* 
+    Created on : Oct 14, 2021, 10:02:34 AM
+    Author     : zian
+*/
+
+
+.btn-close {
+    background: none;
+    -webkit-mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat ;
+    mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat ;
+       
+    -webkit-mask-size: 50%;
+    mask-size: 50%;
+}
+
+  
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: all 0.2s ease-in-out, background-color 0.25s ease-out, color 0.25s ease-out ;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+
+    border: 2px solid var(--main-color);
+    background: transparent;
+
+    color: var(--main-color);
+
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+}
+
+.button:hover {
+    border-color: var(--color-grey);
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.button:hover span {
+    color: var(--color-grey);
+}
+
+.button.inverse {
+    color: white;
+    border-color: white;
+}
+
+.button.inverse:hover {
+    color: var(--main-color);
+    background: white;
+    transition: border-color 0.2s;
+}
+
+.button.inverse:hover span {
+    color: var(--main-color);
+}
+
+.button.success.inverse {
+    color: var(--color-fluoro-pink);
+    border-color: var(--color-fluoro-pink);
+}
+.button.success.inverse:hover {
+    color: white;
+    background-color: var(--color-fluoro-pink);
+}
+
+
+.mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    overflow: visible;  
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
+}
+
+.mat-button, .mat-icon-button, .mat-stroked-button {
+    color: inherit;
+    background: transparent;
+}
+
+
+.mat-button-wrapper > * {
+    vertical-align: middle;
+}
+.mat-icon-button i, .mat-icon-button .mat-icon {
+    line-height: 24px;
+}
+.mat-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+}
+
+
+.mat-button-focus-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    border-radius: inherit;
+    transition: opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.mat-button .mat-button-focus-overlay, 
+.mat-icon-button .mat-button-focus-overlay {
+    opacity: 0;
+}
+
+.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay, 
+.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+    opacity: .04;
+}
+
+
+.mat-stroked-button {
+    box-shadow: 0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12);
+    
+    border-radius: 0;
+}
+.mat-stroked-button {
+    border: 1px solid currentColor;
+    padding: 0 15px;
+    line-height: 34px;
+}
+
+
+.mat-raised-button {
+    background: transparent;
+    color: currentColor;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.mat-raised-button {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+
+.mat-button.mat-warn .mat-button-focus-overlay, 
+.mat-icon-button.mat-warn .mat-button-focus-overlay, 
+.mat-stroked-button.mat-warn .mat-button-focus-overlay {
+    background-color: #f44336;
+}
+
+.mat-raised-button.inverse {
+    color: white;
+    background-color: var( --color-fluoro-pink );
+}
+.mat-raised-button:hover {
+    color: var( --color-fluoro-pink );
+    background-color: white;
+}
+
+
+.btn i, .mat-raised-button i {
+    vertical-align: bottom;
+}
